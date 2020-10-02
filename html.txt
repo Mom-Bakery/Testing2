@@ -1,0 +1,41 @@
+<html>
+<head>
+</head>
+<body>
+<form name="registration" action="page2.php" method="get">
+
+<h2>User Input form</h2>
+<fieldset>
+<legend>Personal</legend>
+<label>Title</label>
+<input type="radio" name="title" value="Mr">Mr
+<input type="radio" name="title" value="Mrs">Mrs
+<input type="radio" name="title" value="Mrs">Ms
+<input type="radio" name="title" value="Dr">Dr
+<input type="radio" name="title" value="Dato">Dato
+<label>Name</label>
+<input type="text" name="name"/><br/>
+<br/>
+<label>Year of Birth</label>
+<input type="text" name="yob"/><br/>
+
+<input type="submit" value="Next"/>
+<input type="reset" value="Clear"/>
+</form>
+</html>
+
+<?php
+$name=$_GET['name'];
+$title=$_GET['title'];
+$yob=$_GET['yob'];
+
+echo"welcome" . $title ." ". $name;
+$age = 2020 - $yob;
+echo "<br/>You're $age year old<br/>";
+
+if ($age<18)
+ echo "You're not eligible to vote";
+else
+ echo "You're eligible to vote";
+?>
+
