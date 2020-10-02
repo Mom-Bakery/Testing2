@@ -2,7 +2,7 @@
 <head>
 </head>
 <body>
-<form name="registration" action="page2.php" method="get">
+<form name="registration" action="" method="">
 
 <h2>User Input form</h2>
 <fieldset>
